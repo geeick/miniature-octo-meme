@@ -27,14 +27,14 @@ const PRACTICE: CoursePractice[] = [
     problems: [
       {
         id: "p1c-rl-001",
-        title: "RL Step Response (Solve i(t))",
+        title: "Current in desktop computer",
         date: "2026-02-19",
-        tags: ["RL", "transients"],
+        tags: ["AC","rms"],
         prompt:
-          "An RL circuit with resistance R and inductance L is connected to a DC source V at t=0.\n\n(1) Derive i(t).\n(2) Find i(∞).\n(3) Identify the time constant.\n\nWrite your steps clearly.",
+          "The plate on the back of a desktop computer says that it draws 2.7 A from a 120 V, 60 Hz line. For this computer, what are (a) the average current, (b) the average of the square of the current, and (c) the current amplitude?",
         solution:
-          "Use KVL: V = L di/dt + Ri.\n\nRearrange: di/dt + (R/L)i = V/L.\nSolve first-order linear ODE.\nHomogeneous: i_h = C e^{-(R/L)t}.\nParticular: i_p = V/R.\nSo i(t) = V/R + C e^{-(R/L)t}.\nWith i(0)=0: 0 = V/R + C ⇒ C = -V/R.\n\nFinal:\n i(t) = (V/R)(1 - e^{-t/τ}), where τ = L/R.\n\ni(∞)=V/R.",
-        images: ["/practice/physics-1c/rl-diagram.png"],
+          "Average current: current over a complete cycle (always zero bc sinosoidal).\nAverage of square of current: Use formula Irms = sqrt(iˆ2) to het Irms = 7.3 Aˆ2.\nCurrent amplitude: Use formula I = sqrt(2Irms) to get I = 10.8 A.",
+        images: ["/physics-1c/figure-31.6.png"],
       },
       {
         id: "p1c-biot-001",
